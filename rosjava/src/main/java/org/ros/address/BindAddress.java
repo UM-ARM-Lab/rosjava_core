@@ -43,7 +43,8 @@ public class BindAddress {
   }
 
   public static BindAddress newPublic() {
-    return newPublic(0);
+    System.out.println("Returning public address with a limited port address");
+    return newPublic(LimitedPortRangeProvider.getInstance().getOpenPort());
   }
 
   /**
